@@ -1,0 +1,25 @@
+<!-- date pipe  -->
+<p>unformatted date:{{toDate}}</p>
+<p>formatted date:{{toDate | date}}</p>
+<p>medium date:{{toDate | date:'medium'}}</p>
+<p>short date:{{toDate | date:'short'}}</p>
+<p>full date:{{toDate | date:'fullDate'}}</p>
+<p>long date:{{toDate | date:'longDate'}}</p>
+
+<!-- slice pipe -->
+<p>default text:{{title}}</p>
+<p>getting hello:{{title|slice:0:5}}</p>
+<h2>Item List</h2>
+<ul>
+  <li *ngFor="let item of items|slice:0:3">{{item}}</li>
+</ul>
+
+<!-- uppercase/lowercase pipe -->
+<p>default text:{{title}}</p>
+<p>uppercase:{{title|uppercase}}</p>
+<p>lowercase:{{title|lowercase}}</p>
+
+<!-- currency pipe -->
+<p>price without formatting:{{price}}</p>
+<p>price with currency pipe:{{price|currency}}</p>
+<p>price with INR currency code:{{price|currency:'INR'}}</p>

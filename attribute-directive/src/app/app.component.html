@@ -1,0 +1,7 @@
+<!-- ngClass -->
+<p [ngClass]="['primary', 'big']">Sample Text</p><br>
+Apply Red <input type="checkbox" [(ngModel)]="applyRed">
+<p [ngClass]="{'primary':applyRed}">Sample Text2</p>
+
+<!-- ngStyle -->
+ <p [ngStyle]="{'color':'red', 'font-size':'40px'}"> Sample Text-3</p>

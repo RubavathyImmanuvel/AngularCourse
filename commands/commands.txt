@@ -1,0 +1,18 @@
+Angular
+
+npm init @angular myApp
+npm start
+sudo npm install -g @angular/cli
+ng —help
+ng serve 
+ng new myApp --no-standalone
+ng new BindingApp
+ng generate component counter
+ng generate directive highlight
+ng generate service Car
+
+
+ng build
+sudo npm install -g http-server
+cd dist/lazy-loading/browser 
+http-server -p 8080

@@ -1,0 +1,27 @@
+<h1>ngFor example</h1>
+<ul>
+  <li *ngFor="let movie of movies">{{movie}}</li> <!--import CommonModule-->
+</ul>
+
+<h1>ngFor variables example</h1>
+<!-- index -->
+ <ul>
+  <li *ngFor="let fruit of fruits; let i=index;">{{i+1}}. {{fruit}}</li>
+ </ul>
+<!-- first and last variables -->
+<ul>
+  <li *ngFor="let fruit of fruits; let isFirst=first; let isLast=last;">
+    <strong *ngIf="isFirst">First:</strong> <!--{{fruit}}-->
+    <strong *ngIf="isLast">Last:</strong> {{fruit}}
+  </li>
+ </ul>
+ <!-- even and odd variables -->
+ <ul>
+  <li *ngFor="let fruit of fruits; let isEven=even; let isOdd=odd;"
+      [ngClass]="{'even-item':isEven, 'odd-item':isOdd}"> {{fruit}}
+  </li>
+ </ul>
+
+ <h1>ngIf variables example</h1>
+ <input type="checkbox" [(ngModel)]="showMe">
+ <p *ngIf="showMe">Can you see me?</p>

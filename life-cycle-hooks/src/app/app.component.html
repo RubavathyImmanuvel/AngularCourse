@@ -1,0 +1,12 @@
+<h1>Life cycle hooks</h1>
+<input type="text" name="title" [(ngModel)]="title">
+<app-child [items]="itemList" [title]="title"></app-child>
+<p>message: {{message}}</p>
+<app-simple-message>
+  <p #messageContent>Hello Angular</p>
+  <p #messageContent>This is a simple example</p>
+</app-simple-message>
+@if(showHello) {  
+  <app-hello></app-hello>
+}
+Sow Hello:<input type="checkbox" [(ngModel)]="showHello">

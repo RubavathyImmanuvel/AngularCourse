@@ -1,0 +1,26 @@
+<!-- one way binding -->
+<h1>{{fullName}}</h1>
+
+<!-- two way binding -->
+<input type="text" [(ngModel)]="fullName"> <!--import FormsModule-->
+
+<!-- string interpolation-->
+<h1>{{title}}</h1>
+<h1>{{getName()}}</h1>
+
+<!-- string interpolation with attribute binding-->
+<img [src]="imageUrl" [alt]="imageAlt">
+<img src="{{imageUrl}}" alt="This is the {{imageAlt}}">
+
+<!-- (DOM element)property binding -->
+ <h1 [innerText]="title"></h1>
+
+ <!-- (DOM element)property binding with safe navigation operator-->
+  <p [textContent]="'TEST'"></p>
+  <p [textContent]="user.name"></p>
+  <p [textContent]="user1.name"></p> <!--throws error in console log-->
+  <p [textContent]="user1?.name"></p>
+
+  <!-- event binding -->
+  <h1>clicked {{clickCount}} times</h1>
+  <button (click)="clickMe()">click me!</button>
